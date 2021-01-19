@@ -1,0 +1,38 @@
+
+
+<<<<<< WAVE ARRAY >>>>>>
+ 
+ 
+ class Solution:
+    def convertToWave(self, arr, N):
+        if(len(arr)<2):
+            return arr
+        arr.sort()
+        for i in range(len(arr)-1):
+            if(i%2==0 and arr[i]<arr[i+1] or i%2==1 and arr[i]>arr[i+1]):
+                t=arr[i]
+                arr[i]=arr[i+1]
+                arr[i+1]=t
+        return arr
+        
+        
+        
+        
+ <<<<<<< STRANGE MATRIX>>>>>>>
+ 
+ 
+ class Solution:
+    # do not edit this function
+    # use it to get the value of A[i][j]
+    def get(self, i, j):
+      return a.get(i,j)
+      
+    def solve(self, R, C):
+        ri =0
+        r=0
+        cc=C-1
+        for i in range(R):
+            while(cc>=0 and a.get(i,cc)==1):
+                cc=cc-1
+                ri=i
+        return ri
