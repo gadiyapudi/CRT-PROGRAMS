@@ -1,0 +1,48 @@
+
+
+<<<<<<< Rearrange the digits program >>>>>>>
+
+class Solution
+{
+public:
+    string smallestnum(string N)
+    {int i;
+        sort(N.begin(),N.end());
+        if(N[0]=='0' && N.length()>1)
+        {
+            for(i=1;i<N.length();i++)
+            {
+               if(N[i]!='0')
+               {
+                break;
+                
+               }
+            }
+            while(i!=0)
+            {
+            swap(N[i],N[i-1]);
+            i--;
+            }
+        } 
+    return N;}
+};
+
+
+
+
+// { Driver Code Starts.
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        string N;
+        cin >>N;
+        Solution ob;
+        string ans = ob.smallestnum(N);
+        cout << ans << endl;
+    }
+    return 0;
+}
+  // } Driver Code Ends
